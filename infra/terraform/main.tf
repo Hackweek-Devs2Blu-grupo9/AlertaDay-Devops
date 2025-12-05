@@ -13,30 +13,17 @@ provider "aws" {
 
 # Data source to get the VPC
 data "aws_vpc" "selected" {
-  filter {
-    name   = "tag:Name"
-    values = [var.vpc_name]
-  }
+  id = var.vpc_id
 }
 
 # Data source to get the subnet
 data "aws_subnet" "selected" {
-  filter {
-    name   = "tag:Name"
-    values = [var.subnet_name]
-  }
-
-  vpc_id = data.aws_vpc.selected.id
+  id = var.subnet_id
 }
 
 # Data source to get the security group
 data "aws_security_group" "selected" {
-  filter {
-    name   = "tag:Name"
-    values = [var.security_group_name]
-  }
-
-  vpc_id = data.aws_vpc.selected.id
+  id = var.security_group_id
 }
 
 # Data source to get the latest Amazon Linux 2023 AMI

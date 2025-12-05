@@ -4,22 +4,22 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
-variable "vpc_name" {
-  description = "Name of the VPC to use"
+variable "vpc_id" {
+  description = "ID of the VPC to use"
   type        = string
-  default     = "vpc-modulo9"
+  default     = "vpc-06786ee7f7a163059"
 }
 
-variable "subnet_name" {
-  description = "Name of the subnet to use"
+variable "subnet_id" {
+  description = "ID of the subnet to use"
   type        = string
-  default     = "sn-rafael"
+  default     = "subnet-0f02b82db8909dfa2"
 }
 
-variable "security_group_name" {
-  description = "Name of the security group to use"
+variable "security_group_id" {
+  description = "ID of the security group to use"
   type        = string
-  default     = "secgroup-AlertaDay"
+  default     = "sg-0d93712067c156844"
 }
 
 variable "key_pair_name" {
