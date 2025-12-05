@@ -29,7 +29,7 @@ git clone https://github.com/Hackweek-Devs2Blu-grupo9/AlertaDay-Java.git
 cd AlertaDay-Java
 
 # Build the Docker image
-docker build -t alertaday-app .
+docker build -t alertaday-app ./alertaday-api
 
 # Run the Docker container
 docker run -d \
